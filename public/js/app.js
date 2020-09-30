@@ -1925,8 +1925,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['product'],
+  data: function data() {
+    return {
+      pro: {
+        name: 'sabuj',
+        phone: '01775559622'
+      }
+    };
+  },
   mounted: function mounted() {
-    console.log('Component mounted.');
+    console.log(this.pro);
+  },
+  methods: {
+    btncheck: function btncheck() {
+      console.log(this.pro);
+    }
   }
 });
 
@@ -37514,32 +37528,30 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Example Component")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v(
-                "\n                    I'm an example component.\n                "
-              )
-            ])
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-md-8" }, [
+        _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-header" }, [
+            _vm._v("Example Component")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-primary btn-block",
+                on: { click: _vm.btncheck }
+              },
+              [_vm._v("Click")]
+            )
           ])
         ])
       ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -49786,7 +49798,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     broadcaster: 'pusher',
 //     key: process.env.MIX_PUSHER_APP_KEY,
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-//     forceTLS: true
+//     encrypted: true
 // });
 
 /***/ }),
@@ -49878,8 +49890,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\SABUJ\Documents\ReadyProjects\laravel-7-starter-project\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\SABUJ\Documents\ReadyProjects\laravel-7-starter-project\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Project\ReadyProjects\fashion-shop\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Project\ReadyProjects\fashion-shop\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
