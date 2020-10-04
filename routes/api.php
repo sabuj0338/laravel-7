@@ -14,10 +14,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::post('/login', 'Api\AuthController@login');
+Route::post('/register', 'Api\AuthController@register');
+
+Route::group(['middleware' => 'auth:sanctum'], function () {
+    // Route::get('/user', function (Request $request){
+    //     return $request->user();
+    // });
+
+    Route::get('/auth-info','Api\AuthController@authenticatedUserInfo');
+
+    Route::post('/logout', 'Api\AuthController@logout');
+    Route::post('/send-verification-code', 'Api\AuthController@send_verify_code');
+    Route::post('/verify', 'Api\AuthController@verify');
+    Route::post('/auth-user/update', 'Api\AuthController@authenticatedUserInfoUpdate');
 });
